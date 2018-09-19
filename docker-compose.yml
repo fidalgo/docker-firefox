@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  firefox:
+    build:
+      context: .
+    environment:
+      gid: 1000
+      uid: 1000
+      DISPLAY: ':0'
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $HOME/Downloads:/home/firefox/Downloads
